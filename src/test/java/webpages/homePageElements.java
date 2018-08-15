@@ -23,6 +23,9 @@ public class homePageElements {
     @FindBy(id="user_password")
     WebElement passw;
 
+    @FindBy(name="commit")
+    WebElement submitbtn;
+
 
     public void homePageElements(){
         PageFactory.initElements(driver, this);
@@ -33,6 +36,7 @@ public class homePageElements {
         Thread.sleep(4000);
         usern.sendKeys("menwoye@gmail.com");
         passw.sendKeys("gns10101");
+        submitbtn.click();
     }
 
 }
