@@ -37,6 +37,7 @@ public class homePageElements {
         usern.sendKeys("menwoye@gmail.com");
         passw.sendKeys("gns10101");
         submitbtn.click();
+        Thread.sleep(4000);
     }
 
 }

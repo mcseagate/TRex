@@ -3,6 +3,7 @@ package testcases;
 import browserStack.browserFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import webpages.homePageElements;
 
@@ -14,10 +15,12 @@ public class homePageTest{
 
 
 
-    @Test
+    @Test(priority = 0)
     public void loginTest() throws IOException, InterruptedException {
-        WebDriver driver = browserFactory.browserSetup("firefox", "https://learn.letskodeit.com/");
+        WebDriver driver = browserFactory.browserSetup("chrome", "https://learn.letskodeit.com/");
         homePageElements hpe = PageFactory.initElements(driver, homePageElements.class);
         hpe.login();
+        driver.quit();
     }
+
 }
